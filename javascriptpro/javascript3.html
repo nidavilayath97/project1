@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function displayMesssage(){
+    var user1={
+        id:1,
+        name:"chip",
+        age:2,
+        userDetails : function(){
+            // this represents current obj like javascript
+            //unlike java, without this objects members cant be accessed
+            //
+            var detailsText=this.id+" ," + this.name+ "," +this.age;
+            return detailsText;
+        }
+    } 
+
+      var user2={
+        id:2,
+        name:"Dale",
+        age:2,
+        userDetails : function(){
+            // this represents current obj like javascript
+            //unlike java, without this objects members cant be accessed
+            //
+            var detailsText=this.id+" ," + this.name+ "," +this.age;
+            return detailsText;
+        }  
+    }
+
+
+
+
+    var element=document.getElementById ('t1'); //fetching the element
+    //window.alert ("changed successfully");  //using for alert dialogue
+    var details1=user1.userDetails;
+    var details2= user2.userDetails;
+    var desiredInner=details1+"<br>"+details2;
+
+    element.innerHTML =desiredInner;
+    console.log("changed the content successfully");  //writing to the browsers console for debugging
+
+}
+
+</script>
+</head>
+<body>
+
+<h1> Playing with objects </h1>
+<a href="#" onclick=displayMesssage()>
+Display Messsage
+</a>
+<div id="t1" style="margin 50px"></div>
+</body>
+</html>

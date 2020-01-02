@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function displayMesssage(){
+    var desiredInner='<h3> Hello World </h3>';
+    var element=document.getElementById ('t1'); //fetching the element
+    //window.alert ("changed successfully");  //using for alert dialogue
+    element.innerHTML =desiredInner;
+    console.log("changed the content successfully");  //writing to the browsers console for debugging
+
+}
+
+</script>
+</head>
+<body>
+
+<h1> Display Messsage </h1>
+<a href="#" onclick=displayMesssage()>
+Display Messsage
+</a>
+<div id="t1" style="margin 50px"></div>
+</body>
+</html>
