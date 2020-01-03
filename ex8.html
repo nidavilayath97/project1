@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<script src="jquery-3.4.1.js" type="text/javascript"> </script>
+<script src="D:\html projects\javascriptpro" type="text/javascript"> </script>
 
 <script type="text/javascript">
 
@@ -18,26 +18,26 @@ function toggleDisplay(){
      //
      // other methods that can be experiemented are hide(),show()
      //
-     //if($("#msgContainer").is(":visible")){
-    //$("#msgContainer").fadeOut(5000); 
-     //}
-     //else{
-       //   $("msgContainer").fadeIn(5000);
-     //}
-      var newPosition={right:'40px'};
-     $("msgContainer").animate(newPosition);
+     if($("#msgContainer").is(":visible")){
+    $("#msgContainer").fadeOut(5000); 
+     }
+     else{
+          $("msgContainer").fadeIn(5000);
+     }
 
-    
+     $("msgContainer").slideUp(500);
 
-   
+ });   
 
-});
 };
 
 //
 // execute our function when dom is ready ,ie. run after document is finished loading
 //
 $(document).ready(toggleDisplay);
+$(document).ready(function(){
+     $("#msgContainer").hide();
+});
 </script>
 
  </head>
@@ -50,9 +50,7 @@ $(document).ready(toggleDisplay);
      Toggle 
 </a>
 
-<div id="msgContainer" style="background:red;
-color:#ffff; width=20px;
-position:absolute;">
+<div id="msgContainer" style="margin:50px">
 <h3>Welcome to deloitte</h3>
 </div>
 </body>
